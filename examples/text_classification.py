@@ -212,7 +212,7 @@ x = layers.GlobalMaxPooling1D()(x)
 x = layers.Dense(128, activation="relu")(x)
 x = layers.Dropout(0.5)(x)
 
-# We project onto a single unit output layer, and squash it with a sigmoid:
+# We project_gan_mnist onto a single unit output layer, and squash it with a sigmoid:
 predictions = layers.Dense(1, activation="sigmoid", name="predictions")(x)
 
 model = tf.keras.Model(inputs, predictions)
